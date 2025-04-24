@@ -1,12 +1,35 @@
 <html>
-<body>
-<h1>This excel can be embedded within any website</h1>
-<p>I would provide the code to your website administrator. It updates live if you change the underlying excel.</p>
+  <head>
+    
+  </head>
 
-<div style="height: 250px; overflow: hidden; position: relative;">
-  <iframe width="500" height="300" frameborder="0" scrolling="no" src="https://dwlyim-my.sharepoint.com/:x:/g/personal/daniel_trysideline_co/EXlOM8W2AstBktc2dwKVlgEBThcyhQ_vvRCdKBPAAkXuCw?e=eBoG80&action=embedview&wdAllowInteractivity=False&AllowTyping=True&Item='Sheet1'!A1%3AD9&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-</div>
-</body>
+  <body>
 
+    <h1>Example of how the calculator would work</h1>
+
+    <h2>The below shows a portion of an Excel file that has been embedded in this webpage.</h2>
+    <p>The idea would be to create the 'public' facing calculator in Excel, then display the relevant portion somewhere on your website like the example below.</p>
+    <p>I can provide the code for your website administrator to copy and paste into your website.</p>
+    <p>This will update live if you change the underlying Excel, so it's easy for you to maintain.</p>
+    <p>Note that we will need a message telling users that this will not display in browsers while using private browsing / incognito mode. This is a Microsoft limitation for embedded office files.</p>
+
+    <div style="margin: 50px; height: 250px; overflow: hidden; position: relative;">
+
+      <iframe width="500" height="300" frameborder="0" scrolling="no" src="https://dwlyim-my.sharepoint.com/:x:/g/personal/daniel_trysideline_co/EXlOM8W2AstBktc2dwKVlgEBjySulk4RbbVwpQx3u5BReA?e=9o6lYa&action=embedview&wdAllowInteractivity=False&ActiveCell='Sheet1'!C4&AllowTyping=True&Item='Sheet1'!B2%3AC8&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+
+    </div>
+
+    <h2>Security</h2>
+    <p>While it doesn't appear you can see formulas etc, a tech savvy person can actually still access the underlying Excel. Although the Excel is locked and relevant formulas and price lists hidden, tools and methods exist to break the security. So it's not bulletproof against somebody who really wants to break in.</p>
+    <p>Having said that, even if the security was bulletproof, a sufficiently determined person could still simply continuously plug in numbers to the calculator, note the results, and eventually reverse engineer the price list.</p>
+    <p>The other thing to note is that if you want to edit the underlying Excel, you will need to first unlock it with a password, and then reapply the password once you are done editing.</p>
+
+    <h2>Implementation</h2>
+    <p>The Excel needs to 'live' in someone's OneDrive or SharePoint. So I would suggest I create the Excel, then once we are happy, we upload it to a BGL OneDrive/SharePoint, and then I can help you generate the relevant code to embed that Excel into your website.</p>
+    <p>As mentioned above, your website administrator will then need to paste that code into your website.</p>
+
+
+
+  </body>
   
 </html>
