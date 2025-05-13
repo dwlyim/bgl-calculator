@@ -13,11 +13,24 @@
     <p>This will update live if you change the underlying Excel, so it's easy for you to maintain.</p>
     <p>Note we will need a message telling users they need to use <b>Chrome/Edge and not in incognito mode</b> to properly view the calculator. This is a Microsoft limitation for embedded office files. Annoying, but I think this should be ok for the audience.</p>
 
-    <div style="margin: 50px; height: 250px; overflow: hidden; position: relative;">
+    <h2>Notes</h2>
+    <ul>
+      <li>Your website font is TTHoves. That font is not available in Excel Online. I have used Poppins but happy to change to something else provided it is supported by Excel Online.</li>
+      <li>Wherever this is placed on your website, we need text covering the following:</li>
+        <ul>
+          <li>Users need to use Chrome/Edge and not in incognito</li>
+          <li>Users need to view on a desktop computer</li>
+          <li>Anything you want to include regarding GST/taxes and currency conversions</li>
+          <li>Any other disclaimers you want to include</li>
+        </ul>
+    </ul>
 
-      <iframe width="500" height="300" frameborder="0" scrolling="no" src="https://dwlyim-my.sharepoint.com/:x:/g/personal/daniel_trysideline_co/EXlOM8W2AstBktc2dwKVlgEBZYFCsRjs9Iz-UyFUBpMKTg?e=XlmtjH&action=embedview&AllowTyping=True&Item='Sheet1'!B2%3AC8&ActiveCell='Sheet1'!C4&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+    <div style="margin:10px; width:100%; height: 620px; overflow: hidden; position: relative;">
+    
+      <iframe width=100% height="650" frameborder="0" scrolling="no" src="https://dwlyim-my.sharepoint.com/personal/daniel_trysideline_co/_layouts/15/Doc.aspx?sourcedoc={1b3391f2-5855-458d-a129-c4b2e4b2b4e9}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Sheet1'!B3&Item='Sheet1'!A1%3AH22&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
 
     </div>
+
 
     <h2>Security</h2>
     <p>While it doesn't appear you can see formulas etc, a tech savvy person can actually still access the underlying Excel. Although the Excel is locked and relevant formulas and price lists hidden, tools and methods exist to break the security. So it's not bulletproof against somebody who really wants to break in.</p>
@@ -27,8 +40,6 @@
     <h2>Implementation</h2>
     <p>The Excel needs to 'live' in someone's OneDrive or SharePoint. So I would suggest I create the Excel, then once we are happy, we upload it to a BGL OneDrive/SharePoint, and then I can help you generate the relevant code to embed that Excel into your website.</p>
     <p>As mentioned above, your website administrator will then need to paste that code into your website.</p>
-
-
 
   </body>
   
