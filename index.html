@@ -1,6 +1,6 @@
 <html>
   <head>
-    
+
   </head>
 
   <body>
@@ -13,23 +13,73 @@
     <p>This will update live if you change the underlying Excel, so it's easy for you to maintain.</p>
     <p>Note we will need a message telling users they need to use <b>Chrome/Edge and not in incognito mode</b> to properly view the calculator. This is a Microsoft limitation for embedded office files. Annoying, but I think this should be ok for the audience.</p>
 
-    <h2>Notes</h2>
+    <h2>Notes (updated 15 May 2025)</h2>
     <ul>
-      <li>Your website font is TTHoves. That font is not available in Excel Online. I have used Poppins but happy to change to something else provided it is supported by Excel Online.</li>
-      <li>Let me know any other design changes you want, for example colours etc.</li>
-      <li>Wherever this is placed on your website, we need text covering the following:</li>
-        <ul>
-          <li>Users need to use Chrome/Edge and not in incognito</li>
-          <li>Users need to view on a desktop computer</li>
-          <li>Anything you want to include regarding GST/taxes and currency conversions</li>
-          <li>Any other disclaimers you want to include</li>
-        </ul>
+      <li>The below example shows the basic layout and features for your website designer to finalise. There's not much point refining all the alignment, sizing, fonts etc here, because that all needs to be done in the context of the code within your actual website.</li>
+      <li>For example, I haven't bothered to use the correct fonts here. Your website font is TTHoves (which I don't have easy access to). Note however the embedded Excel can only use fonts supported in Excel Online, which doesn't include TTHoves - I have used Poppins.</li>
       <li>For now, only you (tali@bygeorgelegal.com.au) can view this embedded Excel file. Once we are happy, we'll follow the steps below under 'Implementation' and change access rights to fully public. To clarify, no changes that users make to the embedded Excel are ever saved.</li>
     </ul>
 
-    <div style="margin:10px; width:100%; height: 620px; overflow: hidden; position: relative;">
-    
-      <iframe width=100% height="650" frameborder="0" scrolling="no" src="https://dwlyim-my.sharepoint.com/personal/daniel_trysideline_co/_layouts/15/Doc.aspx?sourcedoc={1b3391f2-5855-458d-a129-c4b2e4b2b4e9}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Sheet1'!B3&Item='Sheet1'!A1%3AH22&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+
+    <div style="margin-left: 70px; margin-bottom: 30px; margin-top: 50px; height: 70px; display: flex; align-items: center;">
+      <img src="Logo-2.png" style="height: 100%; margin-right: 10px;">
+      <h1 style="margin-left: 20px;">TM Fee Calculator</h1>
+    </div>
+
+    <div style="margin-left: 70px; margin-bottom: 30px;">
+      <p>Please use Chrome/Edge on a desktop device and ensure incognito mode is off.</p>
+    </div>
+
+
+    <div 
+      style="
+      position: relative;
+      width: 920px;
+      height: 550px;
+      margin: 10px;
+      overflow: hidden;
+    ">
+
+      <!-- The iframe (behind the overlay) -->
+      <div style="z-index: 0;">
+        <iframe style="
+          width: 1000px;
+          height: 650px;
+          position: absolute"
+          frameborder="0" 
+          scrolling="no" 
+          src="https://dwlyim-my.sharepoint.com/personal/daniel_trysideline_co/_layouts/15/Doc.aspx?sourcedoc={1b3391f2-5855-458d-a129-c4b2e4b2b4e9}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Sheet1'!B3&Item='Sheet1'!A1%3AH22&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True">
+        </iframe>
+      </div>
+
+      <!-- The overlay (on top of the iframe) -->
+      <div style="
+        position: absolute;
+        width: 920px;
+        height: 100%;
+        background-image: url('image012.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto 100%;
+        z-index: 10;
+        pointer-events: none;
+      ">
+        <div style="
+          position: relative;
+          left: 420px;
+          top: 25px;
+          width: 350px;
+          border-style: solid;
+          border-width: 1px;
+          padding: 5px;
+        ">
+          <strong>Notes</strong>
+          <p>Complete the fields. Calculator populates automatically.</p>
+          <p>The quote is for a single trade mark and assumes a smooth-sailing filing with no objections/oppositions. It excludes GST (which is only payable by Australian entities).</p>
+          <p>Picklist is IP Australia's official goods and services list. Picklist filings are AUD150 cheaper per class than standard filings.</p>
+        </div>
+      
+      </div>
 
     </div>
 
