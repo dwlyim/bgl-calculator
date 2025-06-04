@@ -5,74 +5,49 @@
 
   <body>
 
-    <h1>Example of how the calculator would work</h1>
+    <h1>Instructions to website designer/adminstrator</h1>
 
-    <h2>The below shows a portion of an Excel file that has been embedded in this webpage.</h2>
-    <p>The idea would be to create the 'public' facing calculator in Excel, then display the relevant portion somewhere on your website like the example below.</p>
-    <p>I can provide the code for your website administrator to copy and paste into your website.</p>
-    <p>This will update live if you change the underlying Excel, so it's easy for you to maintain.</p>
-    <p>Note we will need a message telling users they need to use <b>Chrome/Edge and not in incognito mode</b> to properly view the calculator. This is a Microsoft limitation for embedded office files. Annoying, but I think this should be ok for the audience.</p>
+    <p>Please inspect the HTML of this webpage. You will need to copy & integrate the below into BGL's website. Please update the styling (fonts, sizes, layout etc) to align the existing BGL website.</p>
+    <p>Note the embedded Excel is intended to be publicly accessible without any login required. Please do not edit the iframe src, or the underlying Excel itself.</p>
+    
+    <!--- STARTS HERE -->
 
-    <h2>Notes (updated 15 May 2025)</h2>
-    <ul>
-      <li>The below example shows the basic layout and features for your website designer to finalise. There's not much point refining all the alignment, sizing, fonts etc here, because that all needs to be done in the context of the code within your actual website.</li>
-      <li>For example, I haven't bothered to use the correct fonts here. Your website font is TTHoves (which I don't have easy access to). Note however the embedded Excel can only use fonts supported in Excel Online, which doesn't include TTHoves - I have used Poppins.</li>
-      <li>For now, only Tali, George and Joel can view this embedded Excel file. Once we are happy, we'll follow the steps below under 'Implementation' and change access rights to fully public. To clarify, no changes that users make to the embedded Excel are ever saved.</li>
-    </ul>
-
-
-    <div style="margin-left: 70px; margin-bottom: 30px; margin-top: 50px; height: 70px; display: flex; align-items: center;">
+    <div style="align-items: center; display: flex; height: 70px; margin-bottom: 30px; margin-left: 70px; margin-top: 50px;">
       <img src="Logo-2.png" style="height: 100%; margin-right: 10px;">
       <h1 style="margin-left: 20px;">TM Fee Calculator</h1>
     </div>
 
-    <div style="margin-left: 70px; margin-bottom: 30px;">
+    <div style="margin-bottom: 30px; margin-left: 70px; ">
       <p>Please use Chrome/Edge on a desktop device and ensure incognito mode is off.</p>
     </div>
 
-
     <div 
-      style="
-      position: relative;
-      width: 920px;
-      height: 620px;
-      margin: 10px;
-      overflow: hidden;
-    ">
+      style="height: 620px; margin: 10px; overflow: hidden; position: relative; width: 920px;"> <!-- Note the height here is less than the iframe height, in order to hide the control panel which otherwise appears at the bottom of embedded Excel files. -->
 
-      <!-- The iframe (behind the overlay) -->
+      <!-- The iframe showing the embedded Excel file -->
       <div style="z-index: 0;">
         <iframe style="
-          width: 1000px;
           height: 650px;
-          position: absolute"
+          position: absolute;
+          width: 1000px;"        
           frameborder="0" 
           scrolling="no" 
           src="https://dwlyim-my.sharepoint.com/personal/daniel_trysideline_co/_layouts/15/Doc.aspx?sourcedoc={1b3391f2-5855-458d-a129-c4b2e4b2b4e9}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Sheet1'!B3&Item='Sheet1'!A1%3AH25&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True">
         </iframe>
       </div>
 
-      <!-- The overlay (on top of the iframe) -->
+      <!-- The overlay with notes and decoration on top of the iframe.  -->
       <div style="
-        position: absolute;
-        width: 920px;
-        height: 100%;
         background-image: url('image012.png');
-        background-repeat: no-repeat;
         background-position: right bottom;
-        background-size: auto 100%;
-        z-index: 10;
+        background-repeat: no-repeat;
+        background-size: auto 100%;position: absolute;
+        height: 100%;
         pointer-events: none;
+        width: 920px;
+        z-index: 10;
       ">
-        <div style="
-          position: relative;
-          left: 420px;
-          top: 25px;
-          width: 350px;
-          border-style: solid;
-          border-width: 1px;
-          padding: 5px;
-        ">
+        <div style="border-style: solid; border-width: 1px; left: 420px; top: 25px; padding: 5px; position: relative; width: 350px;">
           <strong>Notes</strong>
           <p>Complete the fields. Calculator populates automatically.</p>
           <p>The quote is for a single trade mark and assumes a smooth-sailing filing with no objections/oppositions. It excludes GST (which is only payable by Australian entities).</p>
@@ -83,15 +58,7 @@
 
     </div>
 
-
-    <h2>Security</h2>
-    <p>While it doesn't appear you can see formulas etc, a tech savvy person can actually still access the underlying Excel. Although the Excel is locked and relevant formulas and price lists hidden, tools and methods exist to break the security. So it's not bulletproof against somebody who really wants to break in.</p>
-    <p>Having said that, even if the security was bulletproof, a sufficiently determined person could still simply continuously plug in numbers to the calculator, note the results, and eventually reverse engineer the price list.</p>
-    <p>The other thing to note is that if you want to edit the underlying Excel, you will need to first unlock it with a password, and then reapply the password once you are done editing.</p>
-
-    <h2>Implementation</h2>
-    <p>The Excel needs to 'live' in someone's OneDrive or SharePoint. So I would suggest I create the Excel, then once we are happy, we upload it to a BGL OneDrive/SharePoint, and then I can help you generate the relevant code to embed that Excel into your website.</p>
-    <p>As mentioned above, your website administrator will then need to paste that code into your website.</p>
+    <!--- ENDS HERE -->
 
   </body>
   
